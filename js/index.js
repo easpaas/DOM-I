@@ -60,14 +60,17 @@ navLinks.forEach(link => {
 
 // add link in front
 const home = document.createElement('A');
-home.textContent = "home";
-navLinks[0].prepend(home);
+const homeText = document.createTextNode("Home");
+home.appendChild(homeText);
+home.style.color = "green";
+document.querySelector('nav').prepend(home);
 
 // add link to end
 const shop = document.createElement('A');
-shop.textContent = "shop";
-navLinks[5].appendChild(shop);
-
+const shopText = document.createTextNode("Shop");
+shop.appendChild(shopText);
+shop.style.color = "green";
+document.querySelector('nav').appendChild(shop);
 
 // selectors for cta
 const h1 = document.querySelector('.cta .cta-text h1');
