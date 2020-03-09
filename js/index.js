@@ -53,6 +53,21 @@ navLinks[3].textContent = siteContent["nav"]["nav-item-4"];
 navLinks[4].textContent = siteContent["nav"]["nav-item-5"];
 navLinks[5].textContent = siteContent["nav"]["nav-item-6"];
 
+// apply green text to nav links
+navLinks.forEach(link => {
+  link.style.color = 'green';
+});
+
+// add link in front
+const home = document.createElement('A');
+home.textContent = "home";
+navLinks[0].prepend(home);
+
+// add link to end
+const shop = document.createElement('A');
+shop.textContent = "shop";
+navLinks[5].appendChild(shop);
+
 
 // selectors for cta
 const h1 = document.querySelector('.cta .cta-text h1');
