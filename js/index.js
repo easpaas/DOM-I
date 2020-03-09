@@ -72,6 +72,7 @@ shop.appendChild(shopText);
 shop.style.color = "green";
 document.querySelector('nav').appendChild(shop);
 
+
 // selectors for cta
 const h1 = document.querySelector('.cta .cta-text h1');
 const button = document.querySelector('.cta .cta-text button');
@@ -79,10 +80,30 @@ const ctaImg = document.getElementById('cta-img');
 
 // add text to h1
 h1.textContent = siteContent["cta"]["h1"];
+
 // add text to button
 button.textContent = siteContent["cta"]["button"];
 // set src attribute of cta-img 
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+/* 
+ * *********
+ * Stretch *
+ * *********
+ */
+
+h1.style.color = "seagreen";
+button.style.border = "2px solid seegreen";
+button.style.background = "seagreen";
+
+// event listener for button
+button.addEventListener('click', () => {
+  button.style.backgroundColor = "lightblue";
+  button.style.color = "seagreen";
+  button.style.border = "2px solid seagreen";
+});
+
+
 
 
 // selectors for top content
