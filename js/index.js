@@ -44,14 +44,14 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // selector for nav links
 const navLinks = document.querySelectorAll('nav a');
+// array of object values
+const siteContentNav = Object.values(siteContent['nav']);
 
 // add text to nav links
-navLinks[0].textContent = siteContent["nav"]["nav-item-1"];
-navLinks[1].textContent = siteContent["nav"]["nav-item-2"];
-navLinks[2].textContent = siteContent["nav"]["nav-item-3"];
-navLinks[3].textContent = siteContent["nav"]["nav-item-4"];
-navLinks[4].textContent = siteContent["nav"]["nav-item-5"];
-navLinks[5].textContent = siteContent["nav"]["nav-item-6"];
+// add object value to each link, respectively
+navLinks.forEach((link, index) => {
+  link.textContent = siteContentNav[index];
+});
 
 // apply green text to nav links
 navLinks.forEach(link => {
@@ -71,7 +71,6 @@ const shopText = document.createTextNode("Shop");
 shop.appendChild(shopText);
 shop.style.color = "green";
 document.querySelector('nav').appendChild(shop);
-
 
 // selectors for cta
 const h1 = document.querySelector('.cta .cta-text h1');
